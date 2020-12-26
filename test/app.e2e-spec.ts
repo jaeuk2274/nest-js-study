@@ -47,6 +47,14 @@ describe('AppController (e2e)', () => {
     });
   });
 
+  describe('/movies/:id', () => {
+    it('GET 200', () => {
+      return request(app.getHttpServer).get('/movies/1').expect(200);
+    })
+    it.todo('DELETE');
+    it.todo('PATCH');
+  });
+
   // it('/movies (GET)', () => {
   //   return request(app.getHttpServer()).get('/movies').expect(200).expect([]);
   // });
